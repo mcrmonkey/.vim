@@ -88,3 +88,6 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-vagrant"]
+	path = bundle/vim-vagrant
+	url = https://github.com/hashivim/vim-vagrant.git

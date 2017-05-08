@@ -22,7 +22,7 @@ set nowritebackup
 set splitright                  " Split vertical windows right to the current windows
 set splitbelow                  " Split horizontal windows below to the current windows
 set encoding=utf-8              " Set default encoding to UTF-8
-set autowrite                   " Automatically save before :next, :make etc.
+" set autowrite                   " Automatically save before :next, :make etc.
 set autoread                    " Automatically reread changed files without asking me anything
 set laststatus=2
 set hidden
@@ -59,7 +59,7 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 "set colorcolumn=79
-"set relativenumber
+set relativenumber
 "set norelativenumber
 
 " mail line wrapping
@@ -670,8 +670,8 @@ autocmd BufWritePre * StripWhitespace
 
 " ================= clang-format ==================
 
-map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
-autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.8.py
+" map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
+" imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
+" autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.8.py
 
 " vim:ts=2:sw=2:et
