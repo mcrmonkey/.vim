@@ -264,7 +264,7 @@ imap jk <ESC>l
 nnoremap <F6> :setlocal spell! spell?<CR>
 
 " Select search pattern howewever do not jump to the next one
-nnoremap <leader>c :TComment<CR>
+" nnoremap <leader>c :TComment<CR>
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
@@ -276,6 +276,9 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " trim all whitespaces away
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" lazy for copy pasta - kill nums, relnums and gitgutter
+nnoremap <leader>C :set nonumber<cr>:set norelativenumber<CR>:GitGutterDisable<CR>:echo "Left side cleared"<CR>
 
 " Act like D and C
 nnoremap Y y$
