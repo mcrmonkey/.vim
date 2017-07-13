@@ -2,6 +2,7 @@
 ====
 
 My vim dot files, initially forked from JessFraz.
+
 The `.vimrc` file is saved to vimrc
 
 Just run the following commands via terminal to get set up:
@@ -9,9 +10,14 @@ Just run the following commands via terminal to get set up:
 ```console
 $ cd ~/
 $ git clone --recursive https://github.com/mcrmonkey/.vim.git .vim
-$ cd $HOME/.vim
-$ update.sh
 ```
+You can update the submodules by running:
+
+```console
+$ make update
+```
+
+
 
 ## Pathogen
 The vim dot files make use of [Pathogen](https://github.com/tpope/vim-pathogen) Version 2.4
@@ -24,7 +30,7 @@ The vim dot files make use of [Pathogen](https://github.com/tpope/vim-pathogen) 
  * [github.com/Shougo/deoplete.nvim](https://github.com/Shougo/deoplete.nvim.git)
  * [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim.git)
  * [github.com/scrooloose/nerdtree](https://github.com/scrooloose/nerdtree.git)
- * [github.com/rodjek/vim-puppet](git://github.com/rodjek/vim-puppet.git)
+ * [github.com/rodjek/vim-puppet](https://github.com/rodjek/vim-puppet.git)
  * [github.com/godlygeek/tabular](https://github.com/godlygeek/tabular.git)
  * [github.com/moll/vim-bbye](https://github.com/moll/vim-bbye.git)
  * [github.com/ntpeters/vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace.git)
@@ -45,7 +51,7 @@ The vim dot files make use of [Pathogen](https://github.com/tpope/vim-pathogen) 
  * [github.com/fatih/vim-nginx](https://github.com/fatih/vim-nginx.git)
  * [github.com/hynek/vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent.git)
  * [github.com/mhinz/vim-sayonara](https://github.com/mhinz/vim-sayonara.git)
- * [fedorapeople.org/home/fedora/wwoods/public/vim-scripts.git](git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git)
+ * [github.com/mcrmonkey/vim-scripts](https://github.com/mcrmonkey/vim-scripts)
  * [github.com/hashivim/vim-terraform](https://github.com/hashivim/vim-terraform.git)
  * [github.com/cespare/vim-toml](https://github.com/cespare/vim-toml.git)
  * [github.com/hashivim/vim-vagrant](https://github.com/hashivim/vim-vagrant.git)
