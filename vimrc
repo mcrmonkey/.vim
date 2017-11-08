@@ -259,7 +259,7 @@ map k gk
 map j gj
 
 " Just go out in insert mode
-imap jk <ESC>l
+" imap jk <ESC>l
 
 nnoremap <F6> :setlocal spell! spell?<CR>
 
