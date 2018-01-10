@@ -277,8 +277,8 @@ autocmd BufEnter * silent! lcd %:p:h
 " trim all whitespaces away
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-" lazy for copy pasta - kill nums, relnums and gitgutter
-nnoremap <leader>C :set nonumber<cr>:set norelativenumber<CR>:GitGutterDisable<CR>:echo "Left side cleared"<CR>
+" lazy for copy pasta - kill nums, relnums, gitgutter and indent lines
+nnoremap <leader>C :set nonumber<cr>:set norelativenumber<CR>:GitGutterDisable<CR>:IndentLinesToggle<CR>:echo "Cleared!"<CR>
 
 " Act like D and C
 nnoremap Y y$
@@ -676,5 +676,11 @@ autocmd BufWritePre * StripWhitespace
 " map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
 " imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
 " autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.8.py
+
+" === TF
+let terraform_fold_sections = 1
+
+
+
 
 " vim:ts=2:sw=2:et
