@@ -680,7 +680,6 @@ autocmd BufWritePre * StripWhitespace
 " === TF
 let terraform_fold_sections = 1
 
-
-
+let terraform_align = 1
 
 " vim:ts=2:sw=2:et
