@@ -617,6 +617,8 @@ noremap <Leader>f :NERDTreeFind<cr>
 
 let NERDTreeShowHidden=1
 
+let NERDTreeQuitOnOpen=1
+
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store']
 
 " Close nerdtree and vim on close file
