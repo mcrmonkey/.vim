@@ -32,7 +32,6 @@ au FocusLost * :wa              " Set vim to save the file on focus out.
 
 set fileformats=unix,dos,mac    " Prefer Unix over Windows over OS 9 formats
 
-set noshowmatch                 " Do not show matching brackets by flickering
 set noshowmode                  " We show the mode with airlien or lightline
 set incsearch                   " Shows the match while typing
 set hlsearch                    " Highlight found searches
@@ -60,7 +59,6 @@ set textwidth=79
 set formatoptions=qrn1
 "set colorcolumn=79
 set relativenumber
-"set norelativenumber
 
 " mail line wrapping
 au BufRead /tmp/mutt-* set tw=72
@@ -70,7 +68,6 @@ set complete-=i
 set showmatch
 set smarttab
 
-set et
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -258,9 +255,6 @@ map <Down> gj
 map k gk
 map j gj
 
-" Just go out in insert mode
-" imap jk <ESC>l
-
 nnoremap <F6> :setlocal spell! spell?<CR>
 
 " Select search pattern howewever do not jump to the next one
@@ -277,8 +271,8 @@ autocmd BufEnter * silent! lcd %:p:h
 " trim all whitespaces away
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-" lazy for copy pasta - kill nums, relnums, gitgutter and indent lines
-nnoremap <leader>C :set nonumber<cr>:set norelativenumber<CR>:GitGutterDisable<CR>:IndentLinesToggle<CR>:echo "Cleared!"<CR>
+" lazy for copy pasta - toggle nums, relnums, gitgutter and indent lines
+nnoremap <leader>C :setlocal number! number?<cr>:setlocal relativenumber! relativenumber?<CR>:GitGutterToggle<CR>:IndentLinesToggle<CR>:echo ""<CR>
 
 " Act like D and C
 nnoremap Y y$
@@ -628,23 +622,30 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:vim_json_syntax_conceal = 0
 
 " ==================== Completion =========================
-" use deoplete for Neovim.
-if has('nvim')
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#ignore_sources = {}
-  let g:deoplete#ignore_sources._ = ['buffer', 'member', 'tag', 'file', 'neosnippet']
-  let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
-  let g:deoplete#sources#go#align_class = 1
+
+" ========= vim-markdown ==================
+
+" disable folding
+let g:vim_markdown_folding_disabled = 1
+
+" Allow for the TOC window to auto-fit when it's possible for it to shrink.
+" It never increases its default size (half screen), it only shrinks.
+let g:vim_markdown_toc_autofit = 1
+
+" Disable conceal
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+
+" Allow the ge command to follow named anchors in links of the form
+" file#anchor or just #anchor, where file may omit the .md extension as usual
+let g:vim_markdown_follow_anchor = 1
+
+" highlight frontmatter
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
 
 
-  " Use partial fuzzy matches like YouCompleteMe
-  call deoplete#custom#set('_', 'matchers', ['matcher_fuzzy'])
-  call deoplete#custom#set('_', 'converters', ['converter_remove_paren'])
-  call deoplete#custom#set('_', 'disabled_syntaxes', ['Comment', 'String'])
-endif
-
-" ==================== vim-mardownfmt ====================
-"let g:markdownfmt_autosave = 1
 
 " ==================== vim-multiple-cursors ====================
 let g:multi_cursor_use_default_mapping=0
@@ -670,17 +671,12 @@ endfunction
 " ========= vim-better-whitespace ==================
 
 " auto strip whitespace except for file with extention blacklisted
-let blacklist = ['markdown', 'md']
+let blacklist = ['markdown', 'gitcommit', 'diff']
 " autocmd BufWritePre * StripWhitespace
 let g:strip_whitespace_on_save = 1
 
-" ================= clang-format ==================
 
-" map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
-" imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
-" autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.8.py
-
-" === TF
+" ========= vim-terraform
 let terraform_fold_sections = 1
 
 let terraform_align = 1

@@ -9,7 +9,7 @@ Just run the following commands via terminal to get set up:
 
 ```console
 $ cd ~/
-$ git clone --recursive https://github.com/mcrmonkey/.vim.git .vim
+$ git clone --recursive https://github.com/mcrmonkey/.vim
 ```
 You can update the submodules by running:
 
@@ -26,8 +26,6 @@ The vim dot files make use of [Pathogen](https://github.com/tpope/vim-pathogen) 
 
  * [github.com/ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim.git)
  * [github.com/Raimondi/delimitMate](https://github.com/Raimondi/delimitMate.git)
- * [github.com/zchee/deoplete-go](https://github.com/zchee/deoplete-go.git)
- * [github.com/Shougo/deoplete.nvim](https://github.com/Shougo/deoplete.nvim.git)
  * [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim.git)
  * [github.com/scrooloose/nerdtree](https://github.com/scrooloose/nerdtree.git)
  * [github.com/rodjek/vim-puppet](https://github.com/rodjek/vim-puppet.git)
@@ -46,7 +44,7 @@ The vim dot files make use of [Pathogen](https://github.com/tpope/vim-pathogen) 
  * [github.com/Yggdroot/indentLine](https://github.com/Yggdroot/indentLine.git)
  * [github.com/elzr/vim-json](https://github.com/elzr/vim-json.git)
  * [github.com/groenewege/vim-less](https://github.com/groenewege/vim-less.git)
- * [github.com/moorereason/vim-markdownfmt](https://github.com/moorereason/vim-markdownfmt.git)
+ * [github.com/plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown.git)
  * [github.com/terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
  * [github.com/fatih/vim-nginx](https://github.com/fatih/vim-nginx.git)
  * [github.com/hynek/vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent.git)
