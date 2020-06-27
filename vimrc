@@ -677,7 +677,7 @@ let g:strip_whitespace_on_save = 1
 
 
 " ========= vim-terraform
-let terraform_fold_sections = 1
+let terraform_fold_sections = 0
 
 let terraform_align = 1
 
