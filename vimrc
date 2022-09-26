@@ -411,9 +411,9 @@ imap <C-b> <esc>:CtrlPCurWD<cr>
 
 " ==================== Fugitive ====================
 nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gp :Gpush<CR>
-vnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gs :Git status<CR>
+nnoremap <leader>gp :Git push<CR>
+vnoremap <leader>gb :Git blame<CR>
 
 " ============== MiniBufExpl =====================
 
