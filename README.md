@@ -14,7 +14,7 @@ $ git clone --recursive https://github.com/mcrmonkey/.vim
 You can update the submodules by running:
 
 ```console
-$ make update
+$ make update-all
 ```
 
 
