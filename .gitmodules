@@ -25,9 +25,6 @@
 [submodule "bundle/vim-cfmt"]
 	path = bundle/vim-cfmt
 	url = https://github.com/crosbymichael/vim-cfmt
-[submodule "bundle/vim-toml"]
-	path = bundle/vim-toml
-	url = https://github.com/cespare/vim-toml.git
 [submodule "bundle/vim-better-whitespace"]
 	path = bundle/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
@@ -52,9 +49,6 @@
 [submodule "bundle/vim-sayonara"]
 	path = bundle/vim-sayonara
 	url = https://github.com/mhinz/vim-sayonara.git
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/vim-python-pep8-indent"]
 	path = bundle/vim-python-pep8-indent
 	url = https://github.com/hynek/vim-python-pep8-indent.git
@@ -85,3 +79,11 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+	branch = main
+[submodule "vim-toml"]
+	path = bundle/vim-toml
+	url = https://github.com/cespare/vim-toml.git
+	branch = main
