@@ -12,7 +12,8 @@ help:
 update-all: update/pathogen update/plugins ## - Update everything
 
 update/pathogen: ## - Updates pathogen.
-	curl -LSso $(CURDIR)/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+	@echo "[i] Updating Pathogen"
+	@curl -LSso $(CURDIR)/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 update/plugins: ## - Update submodules
 	@echo "[i] Updating vim submodules:"
